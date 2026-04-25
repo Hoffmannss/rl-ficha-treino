@@ -3,103 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficha RL - Hoffmannss</title>
+    <title>RL PRO Training - Hoffmannss</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
-        :root { --neon: #00f2ff; --bg: #0a0a0c; --card: #16161a; --text: #e0e0e0; }
-        body { background: var(--bg); color: var(--text); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; }
-        h1 { color: var(--neon); text-align: center; font-size: 24px; text-transform: uppercase; margin-bottom: 30px; }
-        .day-section { background: var(--card); border-radius: 15px; padding: 15px; margin-bottom: 20px; border-left: 4px solid var(--neon); }
-        .day-title { font-weight: bold; font-size: 18px; margin-bottom: 10px; display: flex; justify-content: space-between; }
-        .exercise { border-bottom: 1px solid #333; padding: 12px 0; }
+        :root { --neon: #00f2ff; --bg: #0a0a0c; --card: #16161a; --text: #e0e0e0; --accent: #ff00ff; }
+        body { background: var(--bg); color: var(--text); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; line-height: 1.5; }
+        h1 { color: var(--neon); text-align: center; font-size: 24px; text-transform: uppercase; margin-bottom: 5px; }
+        .subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 30px; }
+        .day-section { background: var(--card); border-radius: 15px; padding: 15px; margin-bottom: 25px; border-left: 4px solid var(--neon); box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .day-title { font-weight: bold; font-size: 18px; margin-bottom: 15px; display: flex; justify-content: space-between; color: var(--neon); }
+        .exercise { border-bottom: 1px solid #333; padding: 15px 0; }
         .exercise:last-child { border: none; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; margin: 10px 0; border-radius: 10px; overflow: hidden; }
+        .ex-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; margin: 15px 0; border-radius: 10px; overflow: hidden; border: 1px solid #333; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-        .checkbox-container { display: flex; align-items: center; cursor: pointer; }
+        .instructions { background: rgba(0,242,255,0.05); padding: 10px; border-radius: 8px; font-size: 13px; margin: 10px 0; }
+        .instructions b { color: var(--neon); }
+        .checkbox-container { display: flex; align-items: center; cursor: pointer; flex: 1; }
         .checkbox-container input { display: none; }
-        .checkmark { width: 20px; height: 20px; border: 2px solid var(--neon); border-radius: 5px; margin-right: 10px; position: relative; }
-        input:checked + .checkmark::after { content: '✓'; position: absolute; left: 3px; top: -2px; color: var(--neon); font-weight: bold; }
-        input:checked ~ .label { text-decoration: line-through; color: #555; }
-        .tips { font-style: italic; font-size: 13px; color: var(--neon); margin-top: 5px; opacity: 0.8; }
+        .checkmark { width: 22px; height: 22px; border: 2px solid var(--neon); border-radius: 6px; margin-right: 12px; position: relative; flex-shrink: 0; }
+        input:checked + .checkmark { background: var(--neon); }
+        input:checked + .checkmark::after { content: '✓'; position: absolute; left: 4px; top: -2px; color: #000; font-weight: bold; font-size: 16px; }
+        input:checked ~ .label { opacity: 0.5; text-decoration: line-through; }
+        .time-tag { background: #333; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+        .pro-tip { color: var(--accent); font-size: 12px; font-weight: bold; display: flex; align-items: center; gap: 5px; margin-top: 8px; }
     </style>
 </head>
 <body>
-    <h1>🚀 RL Car Control Routine</h1>
+    <h1>🚀 RL PRO TRAINING</h1>
+    <div class="subtitle">Transição Teclado → Controle | Hoffmannss</div>
 
+    <!-- DIA 1: ORIENTAÇÃO E FEELING -->
     <div class="day-section">
-        <div class="day-title">DIA 1: Base Aérea <span>(20 min)</span></div>
+        <div class="day-title">DIA 1: Orientação Espacial <span>20 min</span></div>
+        
         <div class="exercise">
-            <label class="checkbox-container">
-                <input type="checkbox"> <span class="checkmark"></span>
-                <span class="label"><b>5 min:</b> Orbital Rings (Aquecimento)</span>
-            </label>
+            <div class="ex-header">
+                <label class="checkbox-container">
+                    <input type="checkbox"> <span class="checkmark"></span>
+                    <span class="label"><b>Orbital Rings</b> - Aquecimento</span>
+                </label>
+                <span class="time-tag">5 MIN</span>
+            </div>
             <div class="video-container"><iframe src="https://www.youtube.com/embed/FXSrsNTXi1Q"></iframe></div>
-            <div class="tips">Mapa Orbital Rings. Foco em manter o analógico inclinado para virar.</div>
+            <div class="instructions">
+                <b>O QUE FAZER:</b> Atravesse as argolas sem usar boost contínuo. Tente manter o carro centralizado apenas usando o analógico esquerdo.<br>
+                <b>FOCO:</b> Acostumar a sensibilidade do analógico. Pequenos toques, não empurre tudo para o lado.
+            </div>
+            <div class="pro-tip">⚠️ Não use Air Roll hoje. Apenas aprenda a "dirigir" no ar.</div>
         </div>
+
         <div class="exercise">
-            <label class="checkbox-container">
-                <input type="checkbox"> <span class="checkmark"></span>
-                <span class="label"><b>10 min:</b> LethIceRings (Fases 1-5)</span>
-            </label>
-            <div class="video-container"><iframe src="https://www.youtube.com/embed/5Bhmhcy-Sx4"></iframe></div>
-            <div class="tips">Mapa Ice Rings do Lethamyr. Níveis iniciais.</div>
+            <div class="ex-header">
+                <label class="checkbox-container">
+                    <input type="checkbox"> <span class="checkmark"></span>
+                    <span class="label"><b>LethIceRings</b> - Controle Fino</span>
+                </label>
+                <span class="time-tag">10 MIN</span>
+            </div>
+            <div class="instructions">
+                <b>O QUE FAZER:</b> Tente completar os 3 primeiros níveis. Se cair, respire e recomece imediatamente.<br>
+                <b>FOCO:</b> Aprender a inclinar o carro para frente/trás para ganhar ou perder altura enquanto faz as curvas.
+            </div>
+            <div class="pro-tip">💡 Se o carro começar a girar sem controle, solte tudo e tente estabilizar o bico primeiro.</div>
         </div>
+
         <div class="exercise">
-            <label class="checkbox-container">
-                <input type="checkbox"> <span class="checkmark"></span>
-                <span class="label"><b>5 min:</b> Landens Rings (Precisão)</span>
-            </label>
-            <div class="tips">Mapa Landens Rings. Tente passar pelas argolas menores.</div>
+            <div class="ex-header">
+                <label class="checkbox-container">
+                    <input type="checkbox"> <span class="checkmark"></span>
+                    <span class="label"><b>Free Play</b> - Recoveries</span>
+                </label>
+                <span class="time-tag">5 MIN</span>
+            </div>
+            <div class="instructions">
+                <b>O QUE FAZER:</b> Pule nas paredes e teto. Quando estiver caindo, tente girar o carro para cair SEMPRE com as 4 rodas no chão.<br>
+                <b>FOCO:</b> Segure <b>L1 (Powerslide)</b> ao tocar o chão para não perder o impulso.
+            </div>
         </div>
     </div>
 
+    <!-- DIA 2: CONTROLE DE SOLO E MECÂNICA BASE -->
     <div class="day-section">
-        <div class="day-title">DIA 2: Solo & Defesa <span>(20 min)</span></div>
+        <div class="day-title">DIA 2: Solo & Recuperação <span>20 min</span></div>
+
         <div class="exercise">
-            <label class="checkbox-container">
-                <input type="checkbox"> <span class="checkmark"></span>
-                <span class="label"><b>10 min:</b> LethDribbleRM (Dribbling 1)</span>
-            </label>
+            <div class="ex-header">
+                <label class="checkbox-container">
+                    <input type="checkbox"> <span class="checkmark"></span>
+                    <span class="label"><b>LethDribbleRM</b> - Equilíbrio</span>
+                </label>
+                <span class="time-tag">10 MIN</span>
+            </div>
             <div class="video-container"><iframe src="https://www.youtube.com/embed/h3rjgYuAabg"></iframe></div>
-            <div class="tips">Mapa Dribbling Challenge 1 Remastered. Equilíbrio da bola.</div>
+            <div class="instructions">
+                <b>O QUE FAZER:</b> Leve a bola no capô do carro. Tente não deixar ela cair do círculo branco no chão.<br>
+                <b>FOCO:</b> Use acelerações curtas (R2) em vez de boost. O segredo é ficar no centro do círculo.
+            </div>
         </div>
+
         <div class="exercise">
-            <label class="checkbox-container">
-                <input type="checkbox"> <span class="checkmark"></span>
-                <span class="label"><b>10 min:</b> Meia-volta (Half Flip)</span>
-            </label>
+            <div class="ex-header">
+                <label class="checkbox-container">
+                    <input type="checkbox"> <span class="checkmark"></span>
+                    <span class="label"><b>Half Flip</b> - Defesa Rápida</span>
+                </label>
+                <span class="time-tag">10 MIN</span>
+            </div>
             <div class="video-container"><iframe src="https://www.youtube.com/embed/lP7LxEfIA-Q"></iframe></div>
-            <div class="tips">Pratique o Half Flip no Free Play usando o controle.</div>
+            <div class="instructions">
+                <b>O QUE FAZER:</b> Pratique o movimento: Backflip -> Analógico p/ Cima (Cancel) -> Air Roll.<br>
+                <b>FOCO:</b> Executar 5 vezes seguidas sem errar a aterrissagem.
+            </div>
+            <div class="pro-tip">🔥 Essa é a mecânica mais importante para não tomar gol de contra-ataque.</div>
         </div>
     </div>
 
+    <!-- DIA 3: PROGRESSÃO AÉREA -->
     <div class="day-section">
-        <div class="day-title">DIA 3: Air Dribble Base <span>(20 min)</span></div>
+        <div class="day-title">DIA 3: Altura & Toque <span>20 min</span></div>
+
         <div class="exercise">
-            <label class="checkbox-container">
-                <input type="checkbox"> <span class="checkmark"></span>
-                <span class="label"><b>10 min:</b> LethNeonHeightsRings</span>
-            </label>
-            <div class="video-container"><iframe src="https://www.youtube.com/embed/wB3gDh_fLWI"></iframe></div>
-            <div class="tips">Mapa Neon Heights. Comece a usar o Air Roll para se ajustar.</div>
+            <div class="ex-header">
+                <label class="checkbox-container">
+                    <input type="checkbox"> <span class="checkmark"></span>
+                    <span class="label"><b>LethNeonHeightsRings</b></span>
+                </label>
+                <span class="time-tag">10 MIN</span>
+            </div>
+            <div class="instructions">
+                <b>O QUE FAZER:</b> Mapa Neon Heights. Tente atravessar as argolas usando o **Air Roll Livre (L1)** para se ajustar nas curvas fechadas.<br>
+                <b>FOCO:</b> Combinar o giro do carro com a inclinação do analógico.
+            </div>
         </div>
+
         <div class="exercise">
-            <label class="checkbox-container">
-                <input type="checkbox"> <span class="checkmark"></span>
-                <span class="label"><b>10 min:</b> Air Dribble Warm Up</span>
-            </label>
+            <div class="ex-header">
+                <label class="checkbox-container">
+                    <input type="checkbox"> <span class="checkmark"></span>
+                    <span class="label"><b>Air Dribble Warm Up</b></span>
+                </label>
+                <span class="time-tag">10 MIN</span>
+            </div>
             <div class="video-container"><iframe src="https://www.youtube.com/embed/V_4ajUfCVq4"></iframe></div>
-            <div class="tips">Mapa Air Dribble Warm up 1.0. Tente carregar a bola no ar.</div>
+            <div class="instructions">
+                <b>O QUE FAZER:</b> Tente tocar na bola no ar e mantê-la próxima ao bico do carro.<br>
+                <b>FOCO:</b> Não dê toques fortes. A ideia é "colar" na bola.
+            </div>
         </div>
     </div>
 
-    <p style="text-align:center; color:#555; font-size:12px;">Ficha atualizada com os mapas instalados - Hoffmannss</p>
+    <p style="text-align:center; color:#444; font-size:11px; padding-bottom: 30px;">
+        Layout PRO atualizado • Hoffmannss / Prismatic Labs
+    </p>
 
     <script>
         const checks = document.querySelectorAll('input[type="checkbox"]');
         checks.forEach((c, i) => {
-            const id = 'rl-check-v2-' + i;
+            const id = 'rl-pro-v3-' + i;
             c.checked = localStorage.getItem(id) === 'true';
             c.addEventListener('change', () => localStorage.setItem(id, c.checked));
         });
