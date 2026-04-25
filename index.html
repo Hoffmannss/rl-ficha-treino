@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha RL - Hoffmannss</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <style>
+        :root { --neon: #00f2ff; --bg: #0a0a0c; --card: #16161a; --text: #e0e0e0; }
+        body { background: var(--bg); color: var(--text); font-family: -apple-system, sans-serif; margin: 0; padding: 20px; }
+        h1 { color: var(--neon); text-align: center; font-size: 24px; text-transform: uppercase; margin-bottom: 30px; }
+        .day-section { background: var(--card); border-radius: 15px; padding: 15px; margin-bottom: 20px; border-left: 4px solid var(--neon); }
+        .day-title { font-weight: bold; font-size: 18px; margin-bottom: 10px; display: flex; justify-content: space-between; }
+        .exercise { border-bottom: 1px solid #333; padding: 12px 0; }
+        .exercise:last-child { border: none; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; margin: 10px 0; border-radius: 10px; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .meta { font-size: 14px; color: #888; margin-bottom: 5px; }
+        .checkbox-container { display: flex; align-items: center; cursor: pointer; }
+        .checkbox-container input { display: none; }
+        .checkmark { width: 20px; height: 20px; border: 2px solid var(--neon); border-radius: 5px; margin-right: 10px; position: relative; }
+        input:checked + .checkmark::after { content: '✓'; position: absolute; left: 3px; top: -2px; color: var(--neon); font-weight: bold; }
+        input:checked ~ .label { text-decoration: line-through; color: #555; }
+        .tips { font-style: italic; font-size: 13px; color: var(--neon); margin-top: 5px; opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <h1>🚀 RL Car Control Routine</h1>
+
+    <!-- DIA 1 -->
+    <div class="day-section">
+        <div class="day-title">DIA 1: Base Aérea <span>(20 min)</span></div>
+        <div class="exercise">
+            <label class="checkbox-container">
+                <input type="checkbox"> <span class="checkmark"></span>
+                <span class="label"><b>5 min:</b> Aerial Control - Rings (Warmup)</span>
+            </label>
+            <div class="video-container"><iframe src="https://www.youtube.com/embed/FXSrsNTXi1Q"></iframe></div>
+            <div class="tips">Foco em não soltar o analógico. Tente voar sem Air Roll primeiro.</div>
+        </div>
+        <div class="exercise">
+            <label class="checkbox-container">
+                <input type="checkbox"> <span class="checkmark"></span>
+                <span class="label"><b>10 min:</b> Lethamyr's Ice Rings (Fases 1-5)</span>
+            </label>
+            <div class="video-container"><iframe src="https://www.youtube.com/embed/5Bhmhcy-Sx4"></iframe></div>
+            <div class="tips">Aprenda a virar o bico do carro com precisão. Errou? Reinicia o nível.</div>
+        </div>
+        <div class="exercise">
+            <label class="checkbox-container">
+                <input type="checkbox"> <span class="checkmark"></span>
+                <span class="label"><b>5 min:</b> Free Play (Recuperação)</span>
+            </label>
+            <div class="tips">Pule nas paredes e tente cair com as 4 rodas no chão segurando Powerslide (L1).</div>
+        </div>
+    </div>
+
+    <!-- DIA 2 -->
+    <div class="day-section">
+        <div class="day-title">DIA 2: Ground Control <span>(20 min)</span></div>
+        <div class="exercise">
+            <label class="checkbox-container">
+                <input type="checkbox"> <span class="checkmark"></span>
+                <span class="label"><b>10 min:</b> Dribbling Challenge 1</span>
+            </label>
+            <div class="video-container"><iframe src="https://www.youtube.com/embed/h3rjgYuAabg"></iframe></div>
+            <div class="tips">Mantenha a bola dentro do círculo branco sem deixar cair. Toques leves.</div>
+        </div>
+        <div class="exercise">
+            <label class="checkbox-container">
+                <input type="checkbox"> <span class="checkmark"></span>
+                <span class="label"><b>10 min:</b> Meia-volta (Half Flip) Tutorial</span>
+            </label>
+            <div class="video-container"><iframe src="https://www.youtube.com/embed/lP7LxEfIA-Q"></iframe></div>
+            <div class="tips">Mecânica de defesa essencial. Backflip -> Cancel -> Air Roll.</div>
+        </div>
+    </div>
+
+    <!-- DIA 3 -->
+    <div class="day-section">
+        <div class="day-title">DIA 3: Air Roll Básico <span>(20 min)</span></div>
+        <div class="exercise">
+            <label class="checkbox-container">
+                <input type="checkbox"> <span class="checkmark"></span>
+                <span class="label"><b>10 min:</b> Lethamyr's Rings (Com Air Roll)</span>
+            </label>
+            <div class="video-container"><iframe src="https://www.youtube.com/embed/wB3gDh_fLWI"></iframe></div>
+            <div class="tips">Tente passar por 3 argolas usando Air Roll Direcional (Quadrado/Triângulo).</div>
+        </div>
+        <div class="exercise">
+            <label class="checkbox-container">
+                <input type="checkbox"> <span class="checkmark"></span>
+                <span class="label"><b>10 min:</b> Wave Dash Training</span>
+            </label>
+            <div class="video-container"><iframe src="https://www.youtube.com/embed/GQuV_EH-M6g"></iframe></div>
+            <div class="tips">Aceleração instantânea sem boost. Pule -> Incline -> Dash ao tocar o chão.</div>
+        </div>
+    </div>
+
+    <p style="text-align:center; color:#555; font-size:12px;">Ficha criada para Hoffmannss - Prismatic Labs</p>
+
+    <script>
+        // Salvar estado dos checkboxes localmente
+        const checks = document.querySelectorAll('input[type="checkbox"]');
+        checks.forEach((c, i) => {
+            const id = 'rl-check-' + i;
+            c.checked = localStorage.getItem(id) === 'true';
+            c.addEventListener('change', () => localStorage.setItem(id, c.checked));
+        });
+    </script>
+</body>
+</html>
